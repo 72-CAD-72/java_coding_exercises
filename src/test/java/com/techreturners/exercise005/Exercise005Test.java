@@ -15,6 +15,19 @@ public class Exercise005Test {
         ex005 = new Exercise005();
     }
 
+    // added 2 tests to check the 26 comparison.
+
+    @Test
+    public void checkSentenceLessThan26CharsIsNotAPangram() {
+        assertFalse(ex005.isPangram("only twenty in this!"));
+    }
+
+    @Test
+    public void checkSentenceMoreThan26CharsWithDuplicatesIsNotAPangram() {
+        assertTrue(ex005.isPangram("aaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbb ccccccccccccccccccccccccccc"));
+    }
+
+
     @Test
     public void checkEmptySentenceIsNotAPangram() {
         assertFalse(ex005.isPangram(""));
