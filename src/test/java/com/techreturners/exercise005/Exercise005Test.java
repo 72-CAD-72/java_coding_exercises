@@ -23,8 +23,8 @@ public class Exercise005Test {
     }
 
     @Test
-    public void checkSentenceMoreThan26CharsWithDuplicatesIsNotAPangram() {
-        assertTrue(ex005.isPangram("aaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbb ccccccccccccccccccccccccccc"));
+    public void checkSentenceMoreThan26CharsWithDuplicatesIsNotAPangram(){
+        assertFalse(ex005.isPangram("aaaaaaaaaaaaaaaaaaaaaaa bbbbbbbbbbbbbbbbbbbbbb ccccccccccccccccccccccccccc"));
     }
 
 
