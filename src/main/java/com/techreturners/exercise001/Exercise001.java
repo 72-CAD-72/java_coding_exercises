@@ -1,6 +1,7 @@
 package com.techreturners.exercise001;
 
 import java.util.List;
+import java.util.Objects;
 
 public class Exercise001 {
 
@@ -9,7 +10,7 @@ public class Exercise001 {
     }
 
     public int countLinuxUsers(List<User> users) {
-        long countUsers = users.stream().filter(u -> u.getType() == "Linux").count();
+        long countUsers = users.stream().filter(u -> Objects.equals(u.getType(), "Linux")).count();
         return (int)countUsers;
     }
 
