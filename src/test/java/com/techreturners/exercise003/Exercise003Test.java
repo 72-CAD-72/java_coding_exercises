@@ -15,6 +15,27 @@ public class Exercise003Test {
         ex003 = new Exercise003();
     }
 
+    /*
+            I added 2 tests as per 'Extension', all other functionality was covered by the other tests.
+            Although the exercise didn't mention it, I thought it would be useful enough to return a -1
+            should key not be found, and produce 2 tests for that.
+     */
+    @Test
+    public void checkGetIceCreamCodeForBlank() {
+        String iceCreamFlavour = "";
+        int expected = -1;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
+    @Test
+    public void checkGetIceCreamCodeForMisSpell() {
+        String iceCreamFlavour = "Christian";
+        int expected = -1;
+
+        assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
+    }
+
     @Test
     public void checkGetIceCreamCodeForMintChocolateChip() {
         String iceCreamFlavour = "Mint Chocolate Chip";
@@ -23,7 +44,7 @@ public class Exercise003Test {
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
+
     @Test
     public void checkGetIceCreamCodeForMangoSorbet() {
         String iceCreamFlavour = "Mango Sorbet";
@@ -32,7 +53,7 @@ public class Exercise003Test {
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
+
     @Test
     public void checkGetIceCreamCodeForRaspberryRipple() {
         String iceCreamFlavour = "Raspberry Ripple";
@@ -41,7 +62,7 @@ public class Exercise003Test {
         assertEquals(expected, ex003.getIceCreamCode(iceCreamFlavour));
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
+
     @Test
     public void checkPickMultipleIceCreamFlavours() {
 
