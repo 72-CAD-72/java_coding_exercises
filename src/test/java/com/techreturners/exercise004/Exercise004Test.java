@@ -11,6 +11,25 @@ import static org.junit.Assert.assertEquals;
 
 public class Exercise004Test {
 
+    /* Add two tests */
+    @Test
+    public void checkGetDateTimeWhenBothDateAndTime() {
+
+        Exercise004 ex004 = new Exercise004(LocalDateTime.of(1, Month.MARCH, 1 , 1, 1, 1));
+        LocalDateTime expected = LocalDateTime.of(32, Month.NOVEMBER, 7, 2, 47, 41);
+
+        assertEquals(expected, ex004.getDateTime());
+    }
+
+    @Test
+    public void checkGetDateTimeWhenDate() {
+
+        Exercise004 ex004 = new Exercise004(LocalDate.of(17581, Month.DECEMBER, 15));
+        LocalDateTime expected = LocalDateTime.of(17613, Month.AUGUST, 23, 1, 46, 40);
+
+        assertEquals(expected, ex004.getDateTime());
+    }
+
     @Test
     public void checkGetDateTimeWhenDateIsSpecified() {
 
@@ -20,7 +39,6 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecified() {
 
@@ -30,7 +48,6 @@ public class Exercise004Test {
         assertEquals(expected, ex004.getDateTime());
     }
 
-    @Ignore("You can remove this @ignore annotation to run the test")
     @Test
     public void checkGetDateTimeWhenBothDateAndTimeIsSpecifiedWithDayRollOver() {
 

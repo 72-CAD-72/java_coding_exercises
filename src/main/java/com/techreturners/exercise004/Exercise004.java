@@ -5,15 +5,23 @@ import java.time.LocalDateTime;
 
 public class Exercise004 {
 
+    final int GIGA_SECOND = 1_000_000_000;
+    private LocalDateTime dateTime;
+
     public Exercise004(LocalDate date) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        setDateTime(LocalDateTime.of(date.getYear(), date.getMonthValue(), date.getDayOfMonth(),
+               0 ,0, 0));
     }
 
     public Exercise004(LocalDateTime dateTime) {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        setDateTime(dateTime);
+    }
+
+    private void setDateTime(LocalDateTime localDateTime) {
+        dateTime = localDateTime.plusSeconds(GIGA_SECOND);
     }
 
     public LocalDateTime getDateTime() {
-        throw new UnsupportedOperationException("You can delete this statement and add your code here.");
+        return dateTime;
     }
 }
